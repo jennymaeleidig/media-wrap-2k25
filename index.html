@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>2k25 Media Wrap Up - Jenny Leidig</title>
+    <style>
+      @font-face {
+        font-family: "CommitMono";
+        src: url("./CommitMonoV143/CommitMono-400-Regular.otf")
+          format("opentype");
+        font-weight: normal;
+        font-style: normal;
+      }
+      /* simple centering */
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      #tag-cloud {
+        width: 600px;
+        height: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="tag-cloud" aria-label="3D word cloud"></div>
+    <script src="/svg-3d-tag-cloud/dist/SVG3DTagCloud.global.js"></script>
+
+    <script type="module">
+      const entries = [
+        {
+          label: "Kota Hoshino - Evergrace II OST (2001)",
+          url: "https://downloads.khinsider.com/game-soundtracks/album/forever-kingdom-ps2",
+          target: "_blank",
+        },
+        {
+          label: "The Surfer (2024)",
+          url: "https://letterboxd.com/film/the-surfer-2024/",
+          target: "_blank",
+        },
+        {
+          label: "Mismatched Couples (1985)",
+          url: "https://archive.org/details/mismatched-couples",
+          target: "_blank",
+        },
+        {
+          label: "Half-Life (1998)",
+          url: "https://archive.org/details/valvesoftware-half-life-1998",
+          target: "_blank",
+        },
+        {
+          label:
+            "Lil Ugly Mane - volcanic bird enemy and the voiced concern (2021)",
+          url: "https://liluglymane.bandcamp.com/album/volcanic-bird-enemy-and-the-voiced-concern",
+          target: "_blank",
+        },
+        {
+          label: "Injury Reserve - Double Trio 2 (2025)",
+          url: "https://by-storm.net/3",
+          target: "_blank",
+        },
+        {
+          label: "Jodi - Untitled Game (1996-2001)",
+          url: "https://www.untitled-game.org/download.html",
+          target: "_blank",
+        },
+        {
+          label: "Model/Actriz - Cinderella (2025)",
+          url: "https://modelactriz.bandcamp.com/track/cinderella",
+          target: "_blank",
+        },
+        {
+          label: "Angel's Egg (1985)",
+          url: "https://archive.org/details/angels-egg-1985-blu-ray-1080p-jap-audio/04a.+Angel's+Egg+(1985)/Angel's+Egg+(1985+BluRay+-+1080p+JAP+Audio).mkv",
+          target: "_blank",
+        },
+        {
+          label: "Unofficial Homestuck Collection (2020)",
+          url: "https://homestuck.barb.date/",
+          target: "_blank",
+        },
+        {
+          label: "Demonschool (2025)",
+          url: "https://necrosoftgames.com/demonschool/",
+          target: "_blank",
+        },
+        {
+          label: "Keith Rankin - Unreleased (2025)",
+          url: "https://drive.google.com/file/d/1ORtu4aHmlZWqwYjt_M6c4YnqtN7Kl4hA/view?usp=sharing",
+          target: "_blank",
+        },
+        {
+          label: "DJ Rozwell - NONE OF THIS IS REAL (2013)",
+          url: "https://djrozwell.bandcamp.com/album/none-of-this-is-real",
+          target: "_blank",
+        },
+        {
+          label: "Black Orpheus (1959)",
+          url: "https://www.criterionchannel.com/black-orpheus",
+          target: "_blank",
+        },
+        {
+          label:
+            "Andie Nordgren - The short instructional manifesto for relationship anarchy (2006)",
+          url: "https://theanarchistlibrary.org/library/andie-nordgren-the-short-instructional-manifesto-for-relationship-anarchy",
+          target: "_blank",
+        },
+      ];
+
+      // Initialize the cloud
+      const container = document.getElementById("tag-cloud");
+      let settings = {
+        children: entries,
+        width: 480,
+        height: 480,
+        radius: "65%",
+        fontFamily: "CommitMono, monospace",
+      };
+      const cloud = new SVG3DTagCloud(container, settings).build();
+    </script>
+  </body>
+</html>
